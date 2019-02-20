@@ -176,6 +176,9 @@
         registerSessionAuthenticationStrategy(RegisterSessionAuthenticationStrategy,ref('sessionRegistry'))
         sessionAuthenticationStrategy(CompositeSessionAuthenticationStrategy,[ref('concurrentSingleSessionAuthenticationStrategy'), ref('sessionFixationProtectionStrategy'), ref('registerSessionAuthenticationStrategy')])
         concurrentSessionFilter(ConcurrentSessionFilter, ref('sessionRegistry'), "/login/already")
+        
+        // grails3.3.0用下面这个，查看源码发现ConcurrentSessionFilter类中重定向url的构造方法已被废弃，不生效
+        //concurrentSessionFilter(ConcurrentSessionFilter, ref('sessionRegistry'))
     }
     
 打开grails-app/conf/application.groovy，最后面加入
