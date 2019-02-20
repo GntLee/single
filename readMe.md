@@ -1,15 +1,15 @@
-#开发工具
+# 开发工具
 
     Intellij IDEA 2017.2
-#开发环境：
+# 开发环境：
 
     | Grails Version: 3.1.5
     | Groovy Version: 2.4.6
     | JVM Version: 1.8.0_144
 
-#本项目为grails+spring security实现单端登录
+# 本项目为grails+spring security实现单端登录
     注意：此处当用户并非单点登录，主要实现功能效果防止多端登录，一方登录，另一方强制下线。
-#创建项目（略）
+# 创建项目（略）
 项目创建完成后，在build.gradle中引入spring security依赖：
     
     buildscript {
